@@ -23,12 +23,12 @@ public class Player {
          * Here you should write your algorithms to get the best next move, i.e.
          * the best next state. This skeleton returns a random move instead.
          */
-        Random random = new Random();
-        Minimax algo =new Minimax();
-
-        GameState s=algo.miniMax(gameState, deadline);
-        
-        return s;
+        //Random random = new Random();
+        Minimax algo =new Minimax();        
+      
+        //return nextStates.elementAt(algo.alphaBeta(gameState, gameState.getNextPlayer(),3,Integer.MIN_VALUE,Integer.MAX_VALUE).state);
         //return nextStates.elementAt(random.nextInt(nextStates.size()));
+        //HashMap<GameState, Integer> map=new HashMap<GameState, Integer>();
+        return (algo.alphaBeta(gameState, gameState.getNextPlayer(),3,Integer.MIN_VALUE,Integer.MAX_VALUE).state);
     }    
 }
